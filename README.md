@@ -46,7 +46,7 @@ To run this project locally, you'll need to clone the repository and install the
 
 - **Real-time Sentiment Analysis**: Get instant feedback on the sentiment of your text input.
 - **User-Friendly Interface**: Easily interact with the application through a clean and simple web interface.
-- **Cloud Deployment**: Accessible from anywhere, thanks to the power of Streamlit.
+
 
 ## 👩‍💻 Project Structure
 
