@@ -1,6 +1,6 @@
-# Sentiment Analyzer 🎉
+# Sentiment Analyzer 🧠
 
-Welcome to the **Sentiment Analyzer** project! This project is developed as part of the "Special Topics in Bioinformatics" course and aims to create an easy-to-use web application for sentiment analysis using artificial intelligence. The application is designed specifically for processing and analyzing texts in Portuguese.
+Welcome to the **Sentiment Analyzer** project! This project is developed as part of the "Programming in Bioinformatics and NLP" course and aims to create an easy-to-use web application for sentiment analysis using artificial intelligence. The application is designed specifically for processing and analyzing texts in Portuguese.
 
 ## 📋 Project Description
 
@@ -39,7 +39,7 @@ To run this project locally, you'll need to clone the repository and install the
    ```
 3. Run the application:
    ```bash
-   streamlit run sentimentanalisys.py
+   streamlit run sentimentanalizer.py
    ```
 
 ## ✨ Features
