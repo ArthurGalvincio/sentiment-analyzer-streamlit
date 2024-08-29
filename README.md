@@ -43,18 +43,23 @@ To run this project locally, you'll need to clone the repository and install the
    ```
 
 ## ✨ Features
-Real-time Sentiment Analysis: Get instant feedback on the sentiment of your text input.
-User-Friendly Interface: Easily interact with the application through a clean and simple web interface.
-Cloud Deployment: Accessible from anywhere, thanks to the power of Streamlit.
+
+- **Real-time Sentiment Analysis**: Get instant feedback on the sentiment of your text input.
+- **User-Friendly Interface**: Easily interact with the application through a clean and simple web interface.
+- **Cloud Deployment**: Accessible from anywhere, thanks to the power of Streamlit.
 
 ## 👩‍💻 Project Structure
-app.py: The main application script.
-dark_theme.css: Custom CSS for the dark theme interface.
-requirements.txt: List of dependencies required for the project.
-🤝 Contributors
-Developed by Arthur Galvíncio, Isaac Medeiros, and Rodrigo Andrade as part of their coursework.
+
+- `sentimentanalyzer.py`: The main application script.
+- `dark_theme.css`: Custom CSS for the dark theme interface.
+
+## 🤝 Contributors
+
+Developed by **Arthur Galvíncio, Isaac Medeiros, and Rodrigo Andrade** as part of their coursework in **Programming in Bioinformatics and NLP**.
 
 ## 📚 Additional Information
-This project utilizes the bertweet-pt-sentiment model from Hugging Face, specifically trained to interpret and classify sentiments in Portuguese texts.
+
+This project utilizes the **bertweet-pt-sentiment** model from Hugging Face, specifically trained to interpret and classify sentiments in Portuguese texts.
+
 
 
