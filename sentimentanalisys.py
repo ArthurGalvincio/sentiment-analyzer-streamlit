@@ -1,64 +1,53 @@
 import streamlit as st
 from pysentimiento import create_analyzer
 
-# Função para carregar o CSS
 def load_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-# Função para realizar a análise de sentimentos
 def analyze_sentiment(user_input):
-    modelo_analise_sentimento = create_analyzer(task="sentiment", lang="pt")
-    result = modelo_analise_sentimento.predict(user_input)
+    sentiment_analyzer = create_analyzer(task="sentiment", lang="pt")
+    result = sentiment_analyzer.predict(user_input)
     label = result.output.capitalize()
     score = result.probas[result.output]
     
     return label, score
 
-# Função principal da aplicação
 def main():
-    # Configuração da página
-    st.set_page_config(page_title="Analisador de Sentimentos", layout="centered")
+    st.set_page_config(page_title="Sentiment Analyzer", layout="centered")
 
-    # Carrega o tema escuro
     load_css('dark_theme.css')
 
-    # Título e descrição
-    st.title("Analisador de Sentimentos")
-    st.write("Digite o texto abaixo para analisar o sentimento.")
+    st.title("Sentiment Analyzer")
+    st.write("Enter the text below to analyze the sentiment.")
 
-    # Caixa de texto para entrada do usuário
-    user_input = st.text_area("Texto para análise:", "")
+    user_input = st.text_area("Text for analysis:", "")
 
-    # Quando o usuário clica no botão "Analisar Sentimento"
-    if st.button("Analisar Sentimento"):
+    # When the user clicks the "Analyze Sentiment" button
+    if st.button("Analyze Sentiment"):
         if user_input:
-            # Realiza a análise de sentimento
+            # Perform sentiment analysis
             label, score = analyze_sentiment(user_input)
             
-            # Exibe o resultado na interface
-            st.success("Análise concluída!")
-            st.subheader("Resultado da Análise:")
-            st.write(f"Sentimento: **{label}**")
-            st.write(f"Confiança: **{score:.2f}**")
+            # Display the result in the interface
+            st.success("Analysis completed!")
+            st.subheader("Analysis Result:")
+            st.write(f"Sentiment: **{label}**")
+            st.write(f"Confidence: **{score:.2f}**")
             
-            # Visualização do resultado
+            # Visualize the result
             st.progress(score)
         else:
-            st.warning("Por favor, insira um texto para análise.")
+            st.warning("Please enter text for analysis.")
 
-    # Rodapé
     st.markdown("---")
     
-    # Sobre o Modelo
-    with st.expander("Sobre o Modelo"):
+    with st.expander("About the Model"):
         st.write("""
-            Este analisador de sentimentos utiliza o modelo **bertweet-pt-sentiment** da Hugging Face, treinado especificamente para interpretar e classificar sentimentos em textos em português.
+            This sentiment analyzer uses the **bertweet-pt-sentiment** model from Hugging Face, specifically trained to interpret and classify sentiments in Portuguese texts.
         """)
     
-    # Informação dos Desenvolvedores
-    st.markdown("Desenvolvido por **Arthur Galvíncio, Isaac Medeiros e Rodrigo Andrade**")
+    st.markdown("Developed by **Arthur Galvíncio, Isaac Medeiros, and Rodrigo Andrade**")
 
-# Executa a função principal
 if __name__ == "__main__":
     main()
