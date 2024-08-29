@@ -1,0 +1,23 @@
+body {
+    background-color: #333333;
+    color: #f4f4f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f4f4f9;
+}
+
+.stTextArea textarea {
+    background-color: #444444;
+    color: #f4f4f9;
+}
+
+.stButton button {
+    background-color: #ff5722;
+    color: #ffffff;
+}
+
+.stButton button:hover {
+    background-color: #e64a19; 
+    color: #ffffff;  
+}
