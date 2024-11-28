@@ -29,8 +29,8 @@ To run this project locally, you'll need to clone the repository and install the
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/sentiment-analyzer.git
-   cd sentiment-analyzer
+   git clone https://github.com/ArthurGalvincio/sentiment-analyzer-streamlit.git
+   cd sentiment-analyzer-streamlit
 
    ```
 2. Install the required packages:
